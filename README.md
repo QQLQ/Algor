@@ -1,0 +1,2 @@
+# Algor
+Some thinking.
