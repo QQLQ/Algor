@@ -1,0 +1,29 @@
+#include<stdio.h>
+long FIBO(long);
+int main(void)
+{
+  long n,a;
+printf("Please enter yout Fibonacci sequence number:");
+
+while (scanf("%ld",&n)==1)
+   {a=FIBO(n);
+    printf("Your fibonacci number of %ld is %ld.\n",n,a);
+    printf("Reenter:");}
+
+printf("Bye.\n");
+return 0;
+}
+
+long FIBO(long n)
+{
+  long a=1;    
+  long b=0;
+  long i;   //accumulation number.
+  long c;   //the value of a on the previous line.  
+  
+  for (i=1;i<=n-2;i++)
+      { c=a;
+        a=a+b;
+        b=c;}
+return a+b;
+}
