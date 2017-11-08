@@ -1,0 +1,26 @@
+#include<stdio.h>
+long FIBO(long);
+int main(void)
+{
+  long n,a;
+printf("Please enter yout Fibonacci sequence number:");
+
+while (scanf("%ld",&n)==1)
+   {a=FIBO(n);
+    printf("Your fibonacci number of %ld is %ld.\n",n,a);
+    printf("Reenter:");
+    }
+
+printf("Bye.\n");
+return 0;
+}
+
+long FIBO(long n)
+{ long x;
+   if (n>2)
+      x=FIBO(n-1)+FIBO(n-2);
+   else 
+       return 1;
+
+return x;
+}
